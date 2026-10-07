@@ -41,10 +41,14 @@ CSRF_TRUSTED_ORIGINS = []
 # Render sets this to the public hostname, e.g. taskflow.onrender.com
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-    CSRF_TRUSTED_ORIGINS.append(f'https://{RENDER_EXTERNAL_HOSTNAME}')
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Hugging Face Spaces sets this, e.g. muskanerum-taskflow.hf.space
+SPACE_HOST = os.environ.get('SPACE_HOST')
+
+for public_host in (RENDER_EXTERNAL_HOSTNAME, SPACE_HOST):
+    if public_host:
+        ALLOWED_HOSTS.append(public_host)
+        CSRF_TRUSTED_ORIGINS.append(f'https://{public_host}')
+        SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # =========================================================
@@ -98,6 +102,11 @@ MIDDLEWARE = [
 
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Hugging Face shows the app inside an iframe on huggingface.co,
+# so the "deny iframes" protection has to be off there.
+if SPACE_HOST:
+    MIDDLEWARE.remove('django.middleware.clickjacking.XFrameOptionsMiddleware')
 
 
 # =========================================================

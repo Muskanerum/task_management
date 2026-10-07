@@ -1,3 +1,13 @@
+---
+title: TaskFlow
+emoji: ✅
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # TaskFlow – Task Management App
 
 A learning project: a full-stack task manager built with **Django REST Framework**, **PostgreSQL** and **React + TypeScript**, running entirely in **Docker**.

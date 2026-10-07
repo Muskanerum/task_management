@@ -8,7 +8,7 @@ services:
     name: taskflow
     runtime: docker
     plan: free
-    dockerfilePath: ./Dockerfile.prod
+    dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /api/tasks/
     envVars:
