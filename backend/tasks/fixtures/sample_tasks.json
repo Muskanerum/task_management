@@ -1,0 +1,100 @@
+[
+{
+  "model": "tasks.task",
+  "pk": 1,
+  "fields": {
+    "title": "Complete Django REST API",
+    "description": "Practice CRUD operations and connect React with Django REST API.",
+    "status": "completed",
+    "priority": "medium",
+    "project": "General",
+    "due_date": null,
+    "created_at": "2026-10-06T12:26:19.688Z",
+    "updated_at": "2026-10-06T12:54:01.585Z"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 3,
+  "fields": {
+    "title": "Figma",
+    "description": "learning figma designing",
+    "status": "completed",
+    "priority": "medium",
+    "project": "General",
+    "due_date": null,
+    "created_at": "2026-10-06T12:26:19.688Z",
+    "updated_at": "2026-10-06T12:48:00.054Z"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 4,
+  "fields": {
+    "title": "abc",
+    "description": "hjdkdjkjskmxlsxlml",
+    "status": "completed",
+    "priority": "high",
+    "project": "General",
+    "due_date": "2026-10-17",
+    "created_at": "2026-10-06T12:45:14.443Z",
+    "updated_at": "2026-10-06T13:32:33.550Z"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 7,
+  "fields": {
+    "title": "python",
+    "description": "python course is completed now we are moving on django",
+    "status": "todo",
+    "priority": "medium",
+    "project": "General",
+    "due_date": "2026-02-05",
+    "created_at": "2026-10-06T14:04:48.463Z",
+    "updated_at": "2026-10-06T14:04:48.463Z"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 8,
+  "fields": {
+    "title": "hdjdjdj",
+    "description": "fhfjjj",
+    "status": "todo",
+    "priority": "medium",
+    "project": "General",
+    "due_date": "2027-04-06",
+    "created_at": "2026-10-06T14:55:59.241Z",
+    "updated_at": "2026-10-06T14:55:59.241Z"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 9,
+  "fields": {
+    "title": "Learn React Hooks",
+    "description": "Practice useState and useEffect in React",
+    "status": "completed",
+    "priority": "medium",
+    "project": "web development",
+    "due_date": "2026-10-15",
+    "created_at": "2026-10-06T14:59:29.333Z",
+    "updated_at": "2026-10-06T15:00:40.809Z"
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 10,
+  "fields": {
+    "title": "Javascript",
+    "description": "loop topic is completed.",
+    "status": "completed",
+    "priority": "medium",
+    "project": "General",
+    "due_date": "2026-02-11",
+    "created_at": "2026-10-07T14:47:13.276Z",
+    "updated_at": "2026-10-07T14:47:35.776Z"
+  }
+}
+]

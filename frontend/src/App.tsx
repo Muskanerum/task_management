@@ -29,7 +29,9 @@ interface Notice {
 }
 
 function App() {
-  const API_URL = "http://127.0.0.1:8000/api/tasks/";
+  const API_URL =
+    import.meta.env.VITE_API_URL ||
+    "http://127.0.0.1:8000/api/tasks/";
 
   const [page, setPage] = useState<Page>("dashboard");
   const [tasks, setTasks] = useState<Task[]>([]);
